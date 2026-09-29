@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: white;
+    color: #1E3A5F;
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr;
+    grid-template-areas: 
+    "header header nav"
+    "main main main"
+    "footer footer footer";
+}
+
+header {
+    grid-area: header;
+}
+nav {
+    grid-area: nav;
+}
+main {
+    grid-area: main;
+}
+footer {
+    grid-area: footer;
+}
+
+nav a {
+    color:#1E3A5F;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 900) {
+
+}
