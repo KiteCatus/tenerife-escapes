@@ -40,22 +40,20 @@ footer {
     background-color: #1E3A5F;
     color: white;
 }
-article {
-    display: inline-flex;
+
+article, .stader {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
     border: 1px solid #C79C5A;
     padding: 16px 8px;
-    
+    flex: 1 1 200px;
 }
 
 /* Klasser */
 .stader {
     background-color: #FAF8F5;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 }
 
 .ingress {
@@ -69,23 +67,25 @@ article {
     background-position: center;
     background-repeat: no-repeat;
     min-height: 300px;
-    
 }
 
-.ingress-interior {
-    margin: 0px 32px;
+.stader-interior, .footer-interior, .article-interior, .ingress-interior {
+    margin: 16px 32px;
 }
 
-.article-interior {
-    margin: 0px 32px;
+.stader-interior, .article-interior {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
 .stader-interior {
-    margin: 0px 32px;
-}
-
-.footer-interior {
-    margin: 0px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex: 1 1 150px;
+    border: 1px solid #C79C5A;
 }
 
 /* Länkar */
@@ -100,15 +100,32 @@ nav a {
 
 footer a {
     color: #1E3A5F;
+}
+
+footer a, .ingress a {
     background-color: #C79C5A;
+    padding: 8px;
 }
 
 .ingress a {
-    background-color: #C79C5A;
     color: #FAF8F5;
 }
 nav a:hover {
     background-color: #D8C3A5;
+}
+
+/* Texter */
+.ingress p, .ingress h2 {
+    text-shadow: 2px 2px 4px #FAF8F5;
+}
+
+p {
+    max-width: 65ch;
+    margin-bottom: 8px
+}
+
+h2 {
+    margin-bottom: 16px;
 }
 
 /* Bilder */
