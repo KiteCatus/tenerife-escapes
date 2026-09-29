@@ -36,8 +36,6 @@ main {
 }
 footer {
     grid-area: footer;
-    display: flex;
-    justify-content: center;
     background-color: #1E3A5F;
     color: white;
     border-top: 1px solid #C79C5A;;
@@ -74,6 +72,12 @@ article, .stader {
 
 .stader-interior, .footer-interior, .article-interior, .ingress-interior {
     margin: 16px 32px;
+}
+
+.footer-interior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .stader-interior, .article-interior {
