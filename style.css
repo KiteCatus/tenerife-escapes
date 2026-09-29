@@ -16,7 +16,7 @@ body {
     "header header nav"
     "main main main"
     "footer footer footer";
-    gap: 8px;
+    gap: 16px;
 }
 
 /* Semantiska elementer */
@@ -24,7 +24,7 @@ header {
     grid-area: header;
     display: flex;
     align-items: center;
-    margin: 0px 32px;
+    margin: 16px 0px 0px 32px;
 }
 nav {
     grid-area: nav;
@@ -47,8 +47,7 @@ article {
     gap: 8px;
     border: 1px solid #C79C5A;
     padding: 16px 8px;
-    flex-wrap: wrap;
-    flex: 1 1 220px;
+    
 }
 
 /* Klasser */
@@ -73,6 +72,22 @@ article {
     
 }
 
+.ingress-interior {
+    margin: 0px 32px;
+}
+
+.article-interior {
+    margin: 0px 32px;
+}
+
+.stader-interior {
+    margin: 0px 32px;
+}
+
+.footer-interior {
+    margin: 0px 32px;
+}
+
 /* Länkar */
 a {
     text-decoration: none;
@@ -80,6 +95,7 @@ a {
 
 nav a {
     color:#1E3A5F;
+    padding: 16px;
 }
 
 footer a {
@@ -90,6 +106,9 @@ footer a {
 .ingress a {
     background-color: #C79C5A;
     color: #FAF8F5;
+}
+nav a:hover {
+    background-color: #D8C3A5;
 }
 
 /* Bilder */
