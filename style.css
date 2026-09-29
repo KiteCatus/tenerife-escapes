@@ -16,7 +16,6 @@ body {
     "header header nav"
     "main main main"
     "footer footer footer";
-    gap: 16px;
 }
 
 /* Semantiska elementer */
@@ -24,7 +23,7 @@ header {
     grid-area: header;
     display: flex;
     align-items: center;
-    margin: 16px 0px 0px 32px;
+    margin: 0px 32px;
 }
 nav {
     grid-area: nav;
@@ -37,8 +36,11 @@ main {
 }
 footer {
     grid-area: footer;
+    display: flex;
+    justify-content: center;
     background-color: #1E3A5F;
     color: white;
+    border-top: 1px solid #C79C5A;;
 }
 
 article, .stader {
@@ -60,9 +62,10 @@ article, .stader {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-top: 2px solid #C79C5A;
-    border-bottom: 2px solid #C79C5A;
-    background-image: url("images/bakgrund/ingress.png");
+    flex-wrap: wrap;
+    border-top: 1px solid #C79C5A;
+    border-bottom: 1px solid #C79C5A;
+    background-image: url("images/bakgrund/ingress.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -87,6 +90,7 @@ article, .stader {
     border: 1px solid #C79C5A;
     padding: 16px 8px;
     flex: 1 1 150px;
+    background-color: white;
 }
 
 /* Länkar */
@@ -111,22 +115,35 @@ footer a, .ingress a {
 .ingress a {
     color: #FAF8F5;
 }
+
+.ingress a:hover {
+    background-color: #1E3A5F;
+}
+
 nav a:hover {
+    background-color: #1E3A5F;
+    color: #FAF8F5;
+}
+
+footer a:hover {
     background-color: #D8C3A5;
 }
 
 /* Texter */
-.ingress p, .ingress h2 {
-    text-shadow: 2px 2px 4px #FAF8F5;
+.ingress p {
+    flex: 1 1 200px;
+    margin-bottom: 32px;
 }
 
 p {
     max-width: 65ch;
-    margin-bottom: 8px
+    margin-bottom: 8px;
+    font-size: 1.1rem;
 }
 
 h2 {
     margin-bottom: 16px;
+    font-size: 2rem;
 }
 
 /* Bilder */
