@@ -11,9 +11,9 @@ body {
     background-color: white;
     color: #1E3A5F;
     display: grid;
-    grid-template-columns: 1fr 1fr 4fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
-    "header header nav"
+    "header nav nav"
     "main main main"
     "footer footer footer";
 }
@@ -38,7 +38,16 @@ footer {
     grid-area: footer;
     background-color: #1E3A5F;
     color: white;
-    border-top: 1px solid #C79C5A;;
+    border-top: 1px solid #C79C5A;
+}
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FAF8F5;
+    border-top: 1px solid #C79C5A;
+    border-bottom: 1px solid #C79C5A;
 }
 
 article, .stader {
@@ -70,7 +79,14 @@ article, .stader {
     min-height: 300px;
 }
 
-.stader-interior, .footer-interior, .article-interior, .ingress-interior {
+.om-oss {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1 1 200px;
+}
+
+.stader-interior, .footer-interior, .article-interior, .ingress-interior, .om-oss {
     margin: 16px 32px;
 }
 
@@ -150,6 +166,11 @@ h2 {
     font-size: 2rem;
 }
 
+.betona {
+    font-weight: bold;
+    color: #C79C5A;
+}
+
 /* Bilder */
 img {
     width: 100%;
@@ -160,6 +181,14 @@ img {
     width: 100%;
     height: 150px;
     object-fit: cover;
+}
+
+section img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid #C79C5A;
+    background-color: white;
 }
 
 /* Mobil-läge */
