@@ -28,7 +28,8 @@ header {
 nav {
     grid-area: nav;
     display: flex;
-    align-items: center;
+    justify-content: flex-end;
+    margin-right: 32px;
     gap: 32px;
 }
 main {
@@ -43,21 +44,9 @@ footer {
 section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
     background-color: #FAF8F5;
     border-top: 1px solid #C79C5A;
     border-bottom: 1px solid #C79C5A;
-}
-
-article, .stader {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    border: 1px solid #C79C5A;
-    padding: 16px 8px;
-    flex: 1 1 200px;
 }
 
 /* Klasser */
@@ -113,6 +102,28 @@ article, .stader {
     background-color: white;
 }
 
+.om-teneriffa {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin: 16px 32px;
+}
+
+.article-interior a, .stader {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    border: 1px solid #C79C5A;
+    padding: 16px 8px;
+    flex: 1 1 200px;
+}
+
+.om-teneriffa article {
+    border-top: 1px solid #C79C5A;
+}
+
 /* Länkar */
 a {
     text-decoration: none;
@@ -136,6 +147,11 @@ footer a, .ingress a {
     color: #FAF8F5;
 }
 
+.article-interior a {
+    color:#1E3A5F;
+}
+
+/* Hover pseudoklass */
 .ingress a:hover {
     background-color: #1E3A5F;
 }
@@ -149,14 +165,20 @@ footer a:hover {
     background-color: #D8C3A5;
 }
 
+.article-interior a:hover {
+    transition: transform 0.10s ease;
+    transform: scale(1.03);
+    background-color: #C79C5A;
+}
+
 /* Texter */
 .ingress p {
-    flex: 1 1 200px;
     margin-bottom: 32px;
+    max-width: 50ch;
 }
 
 p {
-    max-width: 65ch;
+    max-width: 100ch;
     margin-bottom: 8px;
     font-size: 1.1rem;
 }
@@ -164,6 +186,23 @@ p {
 h2 {
     margin-bottom: 16px;
     font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+h5 {
+    font-size: 1.1rem;
+}
+
+ul li {
+    margin: 0 32px;
+    font-size: 1.1rem;
 }
 
 .betona {
