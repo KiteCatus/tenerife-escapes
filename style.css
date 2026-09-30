@@ -48,6 +48,16 @@ section {
     border-top: 1px solid #C79C5A;
     border-bottom: 1px solid #C79C5A;
 }
+form {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+textarea {
+    resize: horizontal;
+    min-width: 50ch;
+    min-height: 10ch;
+}
 
 /* Klasser */
 .stader {
@@ -75,7 +85,7 @@ section {
     flex: 1 1 200px;
 }
 
-.stader-interior, .footer-interior, .article-interior, .ingress-interior, .om-oss {
+.stader-interior, .footer-interior, .article-interior, .ingress-interior, .kontakt, .om-oss, .om-teneriffa {
     margin: 16px 32px;
 }
 
@@ -107,7 +117,11 @@ section {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-    margin: 16px 32px;
+}
+
+.kontakt {
+    display: flex;
+    gap: 36px;
 }
 
 .article-interior a, .stader {
@@ -151,7 +165,18 @@ footer a, .ingress a {
     color:#1E3A5F;
 }
 
+button {
+    border: none;
+    color:#FAF8F5;
+    background-color: #1E3A5F;
+    padding: 3px 5px;
+    font-size: 1.2rem;
+}
+
 /* Hover pseudoklass */
+button:hover {
+    background-color: #C79C5A;
+}
 .ingress a:hover {
     background-color: #1E3A5F;
 }
@@ -174,6 +199,10 @@ footer a:hover {
 /* Texter */
 .ingress p {
     margin-bottom: 32px;
+    max-width: 50ch;
+}
+
+.kontakt p {
     max-width: 50ch;
 }
 
