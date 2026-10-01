@@ -1,6 +1,9 @@
-/* color: dark blue: 1E3A5F, light-beige: FAF8F5, 
-gold: C79C5A, beige: D8C3A5 */
+/* 
+- color: dark blue: 1E3A5F, light-beige: FAF8F5, gold: C79C5A, beige: D8C3A5;
+- margin till main content: 16px 32px;
+*/
 
+/* Grundläggande styling */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -52,14 +55,31 @@ form {
     display: flex;
     gap: 16px;
     flex-direction: column;
+    border: 1px solid #C79C5A;
+    padding: 16px;
+    background-color: white;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex: 1;
 }
 textarea {
     resize: horizontal;
-    min-width: 50ch;
+    min-width: 100%;
     min-height: 10ch;
 }
 
 /* Klasser */
+.om-teneriffa-interior {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid #C79C5A;
+    background-color: white;
+    box-shadow: 0px 0px 8px #1E3A5F;
+    padding: 16px 8px;
+    flex: 1;
+}
+
 .stader {
     background-color: #FAF8F5;
 }
@@ -110,6 +130,7 @@ textarea {
     padding: 16px 8px;
     flex: 1 1 150px;
     background-color: white;
+    box-shadow: 0px 0px 8px #1E3A5F;
 }
 
 .om-teneriffa {
@@ -121,7 +142,15 @@ textarea {
 
 .kontakt {
     display: flex;
+    justify-content: space-between;
     gap: 36px;
+    flex: 1 1 200px;
+}
+
+.kontakt-rad {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .article-interior a, .stader {
@@ -136,6 +165,14 @@ textarea {
 
 .om-teneriffa article {
     border-top: 1px solid #C79C5A;
+}
+
+.dold {
+    display: none;
+}
+
+.visa {
+    display: block;
 }
 
 /* Länkar */
@@ -171,12 +208,14 @@ button {
     background-color: #1E3A5F;
     padding: 3px 5px;
     font-size: 1.2rem;
+    cursor: pointer;
 }
 
 /* Hover pseudoklass */
 button:hover {
     background-color: #C79C5A;
 }
+
 .ingress a:hover {
     background-color: #1E3A5F;
 }
