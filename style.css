@@ -105,7 +105,7 @@ textarea {
     flex: 1 1 200px;
 }
 
-.stader-interior, .footer-interior, .article-interior, .ingress-interior, .kontakt, .om-oss, .om-teneriffa {
+.stader-interior, .footer-interior, .article-interior, .ingress-interior, .kontakt, .om-oss, .om-teneriffa, .tjanster {
     margin: 16px 32px;
 }
 
@@ -136,7 +136,8 @@ textarea {
 .om-teneriffa {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: space-around;
+    flex: 1;
     gap: 16px;
 }
 
@@ -163,16 +164,23 @@ textarea {
     flex: 1 1 200px;
 }
 
-.om-teneriffa article {
-    border-top: 1px solid #C79C5A;
-}
-
 .dold {
     display: none;
 }
 
 .visa {
     display: block;
+}
+
+.tjanster {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid #C79C5A;
+    background-color: white;
+    box-shadow: 0px 0px 8px #1E3A5F;
+    padding: 16px 8px;
+    flex: 1;
 }
 
 /* Länkar */
@@ -209,6 +217,7 @@ button {
     padding: 3px 5px;
     font-size: 1.2rem;
     cursor: pointer;
+    width: 150px;
 }
 
 /* Hover pseudoklass */
