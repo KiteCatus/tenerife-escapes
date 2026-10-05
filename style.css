@@ -84,7 +84,7 @@ textarea {
     background-color: #FAF8F5;
 }
 
-.ingress {
+.inledning {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,7 +105,7 @@ textarea {
     flex: 1 1 200px;
 }
 
-.stader-interior, .footer-interior, .article-interior, .ingress-interior, .kontakt, .om-oss, .om-teneriffa, .tjanster {
+.stader-interior, .footer-interior, .article-interior, .inledning-interior, .kontakt, .om-oss, .om-teneriffa, .tjanster {
     margin: 16px 32px;
 }
 
@@ -193,12 +193,12 @@ footer a {
     color: #1E3A5F;
 }
 
-footer a, .ingress a {
+footer a, .inledning a {
     background-color: #C79C5A;
     padding: 8px;
 }
 
-.ingress a {
+.inledning a {
     color: #FAF8F5;
 }
 
@@ -225,7 +225,7 @@ button:hover {
     background-color: #C79C5A;
 }
 
-.ingress a:hover {
+.inledning a:hover {
     background-color: #1E3A5F;
 }
 
@@ -245,7 +245,7 @@ footer a:hover {
 }
 
 /* Texter */
-.ingress p {
+.inledning p {
     margin-bottom: 32px;
     max-width: 50ch;
 }
@@ -306,7 +306,7 @@ section img {
     border: 1px solid #C79C5A;
     background-color: white;
 }
-.ingress img {
+.inledning img {
     display: none;
 }
 
@@ -326,25 +326,36 @@ section img {
         margin: 0px 16px;
     }
 
-    .ingress {
+    .inledning {
         background-image: none;
     }
 
-    .ingress img {
+    .inledning img {
         display: flex;
     }
 }
 @media (max-width: 610px) {
     body {
-        grid-template-columns: 4fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-areas: 
-        "header nav"
-        "main main"
-        "footer footer";
+        "header"
+        "nav"
+        "main"
+        "footer";
     }
 
-    .ingress {
+    .inledning {
         background-image: none;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     nav a {
@@ -364,7 +375,7 @@ section img {
         color: #FAF8F5;
     }
 
-    .show {
+    .oppen-meny {
         display: flex;
         flex-direction: row;
         align-items: center;

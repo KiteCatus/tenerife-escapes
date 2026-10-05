@@ -17,17 +17,17 @@ function visaMer() {
 };
 
 // Funktion för att visa och dölja menyn på mobila enheter
-function toggleMenu() {
-    const openMenuButton = document.querySelector(".open-menu");
-    const navLinks = document.querySelectorAll("nav a");
+function visaMeny() {
+    const menyKnapp = document.querySelector("nav button");
+    const meny = document.querySelectorAll("nav a");
 
-    openMenuButton.addEventListener("click", () => {
-        for (let i = 0; i < navLinks.length; i++) {
-            navLinks[i].classList.toggle("show");
-        }
-    });
+    for (let i = 0; i < meny.length; i++) {
+        menyKnapp.addEventListener("click", () => {
+            meny[i].classList.toggle("oppen-meny");
+        })
+    }
 }
 
 //Deklarerar funktionen för att den ska köras när sidan laddas
 visaMer();
-toggleMenu();
+visaMeny();
