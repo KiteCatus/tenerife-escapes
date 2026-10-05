@@ -174,11 +174,7 @@ textarea {
 
 .tjanster {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
-    border: 1px solid #C79C5A;
-    background-color: white;
-    box-shadow: 0px 0px 8px #1E3A5F;
+    gap: 16px;
     padding: 16px 8px;
     flex: 1;
 }
@@ -218,6 +214,10 @@ button {
     font-size: 1.2rem;
     cursor: pointer;
     width: 150px;
+}
+
+nav button {
+    display: none;
 }
 
 /* Hover pseudoklass */
@@ -306,14 +306,75 @@ section img {
     border: 1px solid #C79C5A;
     background-color: white;
 }
+.ingress img {
+    display: none;
+}
 
 /* Mobil-läge */
 @media (max-width: 900px) {
     body {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+    }
+
+    nav {
+        justify-content: flex-start;
+        margin: 0px 16px;
+    }
+
+    .ingress {
+        background-image: none;
+    }
+
+    .ingress img {
+        display: flex;
+    }
+}
+@media (max-width: 610px) {
+    body {
+        grid-template-columns: 4fr 1fr;
         grid-template-areas: 
         "header nav"
         "main main"
         "footer footer";
+    }
+
+    .ingress {
+        background-image: none;
+    }
+
+    nav a {
+        display: none;
+    }
+
+    nav button {
+        display: flex;
+        background-color: white;
+        color: #1E3A5F;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav button:hover {
+        background-color: #1E3A5F;
+        color: #FAF8F5;
+    }
+
+    .show {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .footer-interior {
+        flex-direction: column;
+        gap: 16px;
     }
 }

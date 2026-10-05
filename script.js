@@ -1,6 +1,6 @@
 // Visa mer funktionalitet i artiklarna på sidan "Om Teneriffa"
-const visaMer = () => {
-    const visaMerKnapp = document.querySelectorAll("#visa-mer");
+function visaMer() {
+    const visaMerKnapp = document.querySelectorAll(".visa-mer");
     const doldElementer = document.querySelectorAll(".dold");
     
     for (let i = 0; i < visaMerKnapp.length; i++) {
@@ -16,4 +16,18 @@ const visaMer = () => {
     }
 };
 
+// Funktion för att visa och dölja menyn på mobila enheter
+function toggleMenu() {
+    const openMenuButton = document.querySelector(".open-menu");
+    const navLinks = document.querySelectorAll("nav a");
+
+    openMenuButton.addEventListener("click", () => {
+        for (let i = 0; i < navLinks.length; i++) {
+            navLinks[i].classList.toggle("show");
+        }
+    });
+}
+
+//Deklarerar funktionen för att den ska köras när sidan laddas
 visaMer();
+toggleMenu();
