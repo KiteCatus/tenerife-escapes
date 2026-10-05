@@ -18,9 +18,9 @@ Minst två exempel. För varje:
 - Vad bad jag om?
 - Vad fick jag?
 - Vad gjorde jag med det?
-1.
+1. Jag bad AI om att berätta hur man skriver en kod till hamburgermeny men det var komplicerad och även om jag förstår koden, jag kan inte återskapa det. Så översatt jag till som jag förstår så det blir enklare.
 
-2.
+2. 
 
 ## Tekniska val (VG)
 Vilka beslut tog jag, och varför?
@@ -29,3 +29,4 @@ Vilka beslut tog jag, och varför?
 ## Bedömning av AI-innehåll (VG)
 Hur avgjorde jag om det AI gav mig var bra nog?
 Vad behöll jag, vad ändrade jag, och varför?
+Jag har frågat AI hur det ser ut en hamburgermeny koden och jag har förstått men sedan jag har skrivit själv eftersom jag har hittat ett lättare sätt att göra det. AI har använt foreach och position: absolute; men jag förstår bättre for loopen eftersom det har jag läst i programmering 1 med C# då jag tyckte att det är bättre. Jag har inte förstått position än så jag hart fört ändrat grid så nav var under header och därefter har jag ändrat nav till flex-direction till row och sedan dessa positioner. Därefter har jag bara dolt nav a så nav button ska stanna kvar. Och sedan har jag skapat function till button.
