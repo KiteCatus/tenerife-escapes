@@ -14,9 +14,11 @@
     </header>
 
     <nav>
+        <!-- Hamburgermeny knappen -->
         <button onclick="visaMeny">
             <i class="fa-solid fa-bars"></i>
         </button>
+
         <a href="../index.html">Hem</a>
         <a href="om-teneriffa.html">Om Teneriffa</a>
         <a href="tjanster.html">Tjänster</a>
@@ -39,31 +41,31 @@
                 </div>
 
                 <!-- Kontaktformuläret -->
-                <form id="formular">
+                <form id="kontakt-formular">
                     <!-- Namnfält -->
-                    <div class="kontakt-rad">
+                    <div class="formular-rad">
                         <label for="namn">Ditt namn: </label>
-                        <input class="" id="namn" type="text">
+                        <input id="namn" type="text">
                     </div>
                     
                     <!-- Epostfält -->
-                    <div class="kontakt-rad">
+                    <div class="formular-rad">
                         <label for="e-post">Epostadress: </label>
-                        <input class="" id="e-post" type="email">
+                        <input id="e-post" type="email">
                     </div>
 
                     <!-- Ämnesfält -->
-                    <div class="kontakt-rad">
+                    <div class="formular-rad">
                         <label for="amne">Ämne: </label>
-                        <input class="" id="amne" type="text">
+                        <input id="amne" type="text">
                     </div>
                     
                     <!-- Meddelandefält -->
-                    <div class="kontakt-rad">
+                    <div class="formular-rad">
                         <label for="meddelande">Meddelande: </label>
                         <textarea id="meddelande" rows="5"></textarea>
 
-                        <button>Skicka</button>
+                        <button id="skicka">Skicka</button>
                     </div>
                 </form>
             </div>

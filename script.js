@@ -28,6 +28,38 @@ function visaMeny() {
     }
 }
 
-//Deklarerar funktionen för att den ska köras när sidan laddas
+//Funktion till tjänsterformuläret
+function tjansteFormular(handelse) {
+    handelse.preventDefault();
+
+    if (epost !== "" && beskrivning !== "") {
+        fel.textContent = "";
+
+        alert(`Ditt epostadress: ${epost}\nValde paket: ${paket.options[paket.selectedIndex].text}\nDitt beskrivning: ${beskrivning}`);
+            //"Ditt epostadress: " + epost + " Valde paket: " + paket + " Ditt beskrivning: " + beskrivning);
+    }
+    else {
+        fel.textContent = "Fyll i alla fält så återkommer vi med ett förslag som passar dig!";
+    }
+}
+
+//Funtion till kontaktformuläret
+
+
+//Deklarera - kontakt.html
+const namn = document.querySelector("#namn");
+const epost = document.querySelector("#e-post").value;
+const amne = document.querySelector("#amne");
+const meddelande = document.querySelector("#meddelande");
+const skickaKnappen = document.querySelector("#skicka");
+
+//Deklarera - tjanster.html
+const paket = document.querySelector("#paket");
+const beskrivning = document.querySelector("#beskrivning").value;
+const felTjanst = document.querySelector("#fel").value;
+
+
+//Anropar funktionen för att den ska köras när sidan laddas
 visaMer();
 visaMeny();
+skickaKnappen.addEventListener("click", tjansteFormular);

@@ -66,6 +66,21 @@ textarea {
     resize: horizontal;
     min-width: 100%;
     min-height: 10ch;
+    border-radius: 0;
+    border: 1px solid #1E3A5F;
+}
+input {
+    border-radius: 0;
+    border: 1px solid #1E3A5F;
+    height: 4vh;
+}
+select {
+    border-radius: 0;
+    border: 1px solid #1E3A5F;
+    background-color: #FAF8F5;
+    color:#1E3A5F;
+    height: 4vh;
+    padding: 3px;
 }
 
 /* Klasser */
@@ -141,14 +156,14 @@ textarea {
     gap: 16px;
 }
 
-.kontakt {
+.kontakt, .tjanster {
     display: flex;
     justify-content: space-between;
     gap: 36px;
     flex: 1 1 200px;
 }
 
-.kontakt-rad {
+.formular-rad {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -176,6 +191,12 @@ textarea {
     display: flex;
     gap: 16px;
     padding: 16px 8px;
+    flex: 1;
+}
+
+.tjanster-interior {
+    display: flex;
+    flex-direction: column;
     flex: 1;
 }
 
@@ -285,6 +306,20 @@ ul li {
 .betona {
     font-weight: bold;
     color: #C79C5A;
+}
+
+#fel {
+    color: #b3261e;
+    min-height: 1.5rem;
+}
+
+.fel {
+    border: 2px solid #b3261e;
+}
+
+.klar {
+    text-decoration: line-through;
+    color: grey;
 }
 
 /* Bilder */

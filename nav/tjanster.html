@@ -14,9 +14,11 @@
     </header>
 
     <nav>
+        <!-- Hamburgermeny knappen -->
         <button onclick="visaMeny">
             <i class="fa-solid fa-bars"></i>
         </button>
+
         <a href="../index.html">Hem</a>
         <a href="om-teneriffa.html">Om Teneriffa</a>
         <a href="tjanster.html">Tjänster</a>
@@ -32,7 +34,7 @@
             <div class="tjanster">
                 
                 <!-- Ingress om tjänster -->
-                <div>
+                <div class="tjanster-interior">
                     <h2>Våra tjänster</h2>
                     <p>Vi erbjuder olika tjänster för att göra din resa till Teneriffa så smidig och personlig som möjligt. Oavsett om du vill ha hjälp med att planera hela resan eller bara behöver tips på aktiviteter och platser, finns vi här för att hjälpa dig.</p>
                     <p>Välj mellan olika paket och tjänster som passar dina behov och önskemål. Vi kan hjälpa dig med allt från att boka boende och aktiviteter till att ge dig insider-tips på dolda pärlor på ön.</p>
@@ -40,26 +42,31 @@
                 </div>
 
                 <!-- Tjänster i form -->
-                <div>
-                    <form id="formular">
+                <form id="tjanste-formular">
+                    <div class="formular-rad">
                         <h3>Välj mellan våra tjänster</h3>
-
                         <label for="e-post">E-postadress:</label>
                         <input type="email" id="e-post" name="e-post">
-
+                    </div>
+                    
+                    <div class="formular-rad">
                         <label for="paket">Välj ett paket:</label>
                         <select id="paket" name="paket">
                             <option value="grundpaket">Grundpaket - Tips och råd</option>
                             <option value="fullt-paket">Fullt paket - Planering av hela resan</option>
                             <option value="personlig-guide">Personlig guide - Utflykter och aktiviteter</option>
                         </select>
-
+                    </div>
+                    
+                    <div class="formular-rad">
                         <label for="beskrivning">Beskriv dina önskemål:</label>
                         <textarea id="beskrivning" name="beskrivning" rows="5"></textarea>
 
-                        <button type="submit">Skicka förfrågan</button>
-                    </form>
-                </div>
+                        <button id="skicka">Skicka förfrågan</button>
+
+                        <p id="fel"></p>
+                    </div>
+                </form>
             </div>
         </section>
     </main>
