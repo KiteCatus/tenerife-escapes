@@ -308,18 +308,9 @@ ul li {
     color: #C79C5A;
 }
 
-#fel {
+#kontakt-fel, #tjanst-fel {
     color: #b3261e;
     min-height: 1.5rem;
-}
-
-.fel {
-    border: 2px solid #b3261e;
-}
-
-.klar {
-    text-decoration: line-through;
-    color: grey;
 }
 
 /* Bilder */
@@ -413,6 +404,11 @@ section img {
         color: #1E3A5F;
         justify-content: center;
         align-items: center;
+    }
+
+    nav button:hover, nav button.active {
+        background-color: #1E3A5F;
+        color: white;
     }
 
     /* Öppen meny utseende */

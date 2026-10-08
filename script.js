@@ -32,34 +32,59 @@ function visaMeny() {
 function tjansteFormular(handelse) {
     handelse.preventDefault();
 
-    if (epost !== "" && beskrivning !== "") {
-        fel.textContent = "";
+    const epost = epostInput.value;
+    const beskrivning = beskrivningInput.value;
 
-        alert(`Ditt epostadress: ${epost}\nValde paket: ${paket.options[paket.selectedIndex].text}\nDitt beskrivning: ${beskrivning}`);
-            //"Ditt epostadress: " + epost + " Valde paket: " + paket + " Ditt beskrivning: " + beskrivning);
+    if (epost !== "" && beskrivning !== "") {
+        tjansteFelmeddelande.textContent = "";
+
+        alert(`Formuläret skickades. Tack för ditt meddelande! Vi återkommer till dig inom några dagar.\n\nDitt epostadress: ${epost}\nValde paket: ${paket.options[paket.selectedIndex].text}\nDitt beskrivning: ${beskrivning}`);
     }
     else {
-        fel.textContent = "Fyll i alla fält så återkommer vi med ett förslag som passar dig!";
+        tjansteFelmeddelande.textContent = "Fyll i alla fält så återkommer vi med ett förslag som passar dig!";
     }
 }
 
 //Funtion till kontaktformuläret
+function kontaktFormular(handelse) {
+    handelse.preventDefault();
 
+    const namn = namnInput.value;
+    const epost = epostInput.value;
+    const amne = amneInput.value;
+    const meddelande = meddelandeInput.value;
+
+    if (namn !== "" && epost !== "" && amne !== "" && meddelande !== "") {
+        kontaktFelmeddelande.textContent = "";
+
+        alert(`Formuläret skickades. Tack för ditt meddelande, ${namn}! Vi återkommer till dig inom några dagar.\n\nDitt namn: ${namn}\nDitt epostadress: ${epost}\nDitt ämne: ${amne}\nDitt meddelande: ${meddelande}`);
+    }
+    else {
+        kontaktFelmeddelande.textContent = "Fyll i alla fält så hör jag av mig så snart jag kan!";
+    }
+}
 
 //Deklarera - kontakt.html
-const namn = document.querySelector("#namn");
-const epost = document.querySelector("#e-post").value;
-const amne = document.querySelector("#amne");
-const meddelande = document.querySelector("#meddelande");
-const skickaKnappen = document.querySelector("#skicka");
+const namnInput = document.querySelector("#namn");
+const epostInput = document.querySelector("#e-post");
+const amneInput = document.querySelector("#amne");
+const meddelandeInput = document.querySelector("#meddelande");
+const kontaktSkickaKnappen = document.querySelector("#kontakt-skicka");
+const kontaktFelmeddelande = document.querySelector("#kontakt-fel");
 
 //Deklarera - tjanster.html
 const paket = document.querySelector("#paket");
-const beskrivning = document.querySelector("#beskrivning").value;
-const felTjanst = document.querySelector("#fel").value;
-
+const beskrivningInput = document.querySelector("#beskrivning");
+const tjansteSkickaKnappen = document.querySelector("#tjanst-skicka");
+const tjansteFelmeddelande = document.querySelector("#tjanst-fel");
 
 //Anropar funktionen för att den ska köras när sidan laddas
 visaMer();
 visaMeny();
-skickaKnappen.addEventListener("click", tjansteFormular);
+if (tjansteSkickaKnappen) {
+    tjansteSkickaKnappen.addEventListener("click", tjansteFormular);
+}
+
+if (kontaktSkickaKnappen) {
+    kontaktSkickaKnappen.addEventListener("click", kontaktFormular);
+}
