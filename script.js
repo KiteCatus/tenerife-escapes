@@ -3,6 +3,7 @@ function visaMer() {
     const visaMerKnapp = document.querySelectorAll(".visa-mer");
     const doldElementer = document.querySelectorAll(".dold");
     
+    //Alla knapp fungerar
     for (let i = 0; i < visaMerKnapp.length; i++) {
         visaMerKnapp[i].addEventListener("click", () => {
             doldElementer[i].classList.toggle("visa");
@@ -17,10 +18,11 @@ function visaMer() {
 };
 
 // Funktion för att visa och dölja menyn på mobila enheter
-function visaMeny() {
+function hamburgerMeny() {
     const menyKnapp = document.querySelector("nav button");
     const meny = document.querySelectorAll("nav a");
 
+    // Alla knapp fungerar
     for (let i = 0; i < meny.length; i++) {
         menyKnapp.addEventListener("click", () => {
             meny[i].classList.toggle("oppen-meny");
@@ -32,9 +34,11 @@ function visaMeny() {
 function tjansteFormular(handelse) {
     handelse.preventDefault();
 
+    //Value
     const epost = epostInput.value;
     const beskrivning = beskrivningInput.value;
 
+    //Kontrollera input
     if (epost !== "" && beskrivning !== "") {
         tjansteFelmeddelande.textContent = "";
 
@@ -49,11 +53,13 @@ function tjansteFormular(handelse) {
 function kontaktFormular(handelse) {
     handelse.preventDefault();
 
+    // Value
     const namn = namnInput.value;
     const epost = epostInput.value;
     const amne = amneInput.value;
     const meddelande = meddelandeInput.value;
 
+    // Kontrollera input
     if (namn !== "" && epost !== "" && amne !== "" && meddelande !== "") {
         kontaktFelmeddelande.textContent = "";
 
@@ -64,7 +70,7 @@ function kontaktFormular(handelse) {
     }
 }
 
-//Deklarera - kontakt.html
+// Deklarera - kontakt.html
 const namnInput = document.querySelector("#namn");
 const epostInput = document.querySelector("#e-post");
 const amneInput = document.querySelector("#amne");
@@ -72,15 +78,17 @@ const meddelandeInput = document.querySelector("#meddelande");
 const kontaktSkickaKnappen = document.querySelector("#kontakt-skicka");
 const kontaktFelmeddelande = document.querySelector("#kontakt-fel");
 
-//Deklarera - tjanster.html
+// Deklarera - tjanster.html
 const paket = document.querySelector("#paket");
 const beskrivningInput = document.querySelector("#beskrivning");
 const tjansteSkickaKnappen = document.querySelector("#tjanst-skicka");
 const tjansteFelmeddelande = document.querySelector("#tjanst-fel");
 
-//Anropar funktionen för att den ska köras när sidan laddas
+// Anropar funktionen för att den ska köras när sidan laddas
 visaMer();
-visaMeny();
+hamburgerMeny();
+
+// Kolla om knappen finns i HTML filerna
 if (tjansteSkickaKnappen) {
     tjansteSkickaKnappen.addEventListener("click", tjansteFormular);
 }
