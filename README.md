@@ -18,7 +18,7 @@ Vad kan besökaren göra på sidan? Vilken fil och vilka funktioner sköter det?
 
 - I alla html filer har en knapp i nav som gör att besökaren kan öppna menyn i smala skärmarna medan de klicker på knappen. Jag har använt CSS så knappen ska inte synas och i en media query byter nav utseende till att knappen ska visas, <a> länkar inuti nav syns inte och navs utseende blir kolumn då när man klicker på knappen, det ska synas så här. Jag har också använt JavaScript så dessa kopplas ihop med en funktion som heter hamburgerMeny().
 
-- I tjanster.html kan besökaren fylla in ett formulär där man kan välja vilken paket de vill ha och skriva ett meddelande till företaget hur de tänkte. Det funkar inte än att skicka den till en mejl men det visar att det skickades och vad besökaren har skrivit. I html använde jag en <form> då det skapar ett formulär och också en <select> <option> så användaren kan välja mellan 3 olika paketer. Jag har använt CSS hur det ska se ut och var det ska ligga. I JavaScript har jag använt en funktion som heter tjansteFormular() som gör att ta in variablar som jag har deklarerat utanför funktion. Funktionen kollar om besökaren har skrivit något eller inte och om de skickar då de får ett meddelande (alert()) som meddelar besökaren att de har skickat ett meddelande vad de har skrivit.
+- I tjanster.html kan besökaren fylla in ett formulär där man kan välja vilken paket de vill ha och skriva ett meddelande till företaget hur de tänkte. Det funkar inte än att skicka den till en mejl men det visar att det skickades och vad besökaren har skrivit. I HTML använde jag en <form> då det skapar ett formulär och också en <select> <option> så användaren kan välja mellan 3 olika paketer. Jag har använt CSS hur det ska se ut och var det ska ligga. I JavaScript har jag använt en funktion som heter tjansteFormular() som gör att ta in variablar som jag har deklarerat utanför funktion. Funktionen kollar om besökaren har skrivit något eller inte och om de skickar då de får ett meddelande (alert()) som meddelar besökaren att de har skickat ett meddelande vad de har skrivit.
 
 - I kontakt.html är samma som med tjanster.html form men utan <select> <option>. Funktionen heter kontaktFormular().
 
@@ -30,7 +30,7 @@ Minst två exempel. För varje:
 
 1. Jag bad AI om att berätta hur man skriver en kod till hamburgermeny men det var komplicerad och även om jag förstår koden, jag kan inte återskapa det. Så jag försökte själv och skrev koden utan AI. Det blev enklare och det fungerade.
 
-2. Jag har gjort två funktioner som funkade inte och jag visste inte varför. Jag har provat många saker men efter det så har jag frågat AI. Felet var att sista två funktioner (formulär) har eventlistener utanför funktionen och därför kollar att det finns den här knappen. Men några HTML filer har inte den knappen så jag behövde en if-sats som kollar om sidan har den knappen eller inte. Om det har då funktionen körs. Det hjälpte mig att funktionen funkar utan att ändra något i funktionen. Jag ville inte ändra eftersom jag ville kolla hur det funkar om en eventlistener är utanför funktionen.
+2. Jag har gjort två funktioner som funkade inte och jag visste inte varför. Jag har provat många saker men efter det så har jag frågat AI. Felet var att två funktioner (formulär) har haft eventlistener utanför funktionen och de har därför letat efter knappen onödigt och på fel sidan. Eftersom några HTML filer har inte den knappen så AI föreslog att använsa if-satsen som kollar om sidan har den knappen eller inte. Om det har då körs funktionen. Det hjälpte mig att funktionen funkar utan att ändra något i funktionen. Men sedan tänkte jag att skapa två JavaScript filer till dessa funktion och jag har kopplat ihop med HTML fil där jag använder dessa.
 
 3. Jag visste inte hur jag kan använda value till <select> <option> så jag har bett AI hur jag kan lösa det och frågat också vad det betyder. Jag har fått paket.options[paket.selectedIndex].text. paket.options[1] är det första val. Men vi behöver detta val som besökaren har valt och vi behöver paket.selectedIndex inne i [] som ger detta som är vald. .text ger ett text så det ska synas i alert().
 
@@ -43,12 +43,16 @@ Vilka beslut tog jag, och varför?
 
 - I hamburgermeny har jag inte använt position: absolute; eftersom jag kunde inte lösa med det, eftersom jag förstod inte riktig hur det fungerar. Jag valde att göra det som en Visa mer knapp istället.
 
+- Nästan alla div använder jag för att designa lättare och positionera bättre med flex. 
+
+- I JavaScript fil har jag fått ett felmeddelande till hela sidan som var att de söker knapparna då jag frågade AI hur kan jag lösa problemet och har då fått svar att if-satsen löser detta problemet. Det kollar om det finns knappar i alla HTML filer. Om det finns då körs koden. Det fungerade men jag har hittat ett bättre lösning med att skapa andra JavaScript filer och sätta funktionerna som anpassar sig till sidan. Då blir det mer organiserad och hittar bättre funktionen till sidan. Då det kollar inte om det finns knappen onödigt.
+
 ## Bedömning av AI-innehåll (VG)
 Hur avgjorde jag om det AI gav mig var bra nog?
 Vad behöll jag, vad ändrade jag, och varför?
 
 Jag har frågat AI hur koden för en hamburgermeny ser ut och jag har förstått men sedan jag har skrivit själv eftersom jag har hittat ett lättare sätt att göra det. AI har använt foreach och position: absolute; men jag förstår bättre for loopen eftersom det har jag läst i programmering 1 med C# då jag tyckte att det är bättre. Jag har inte förstått position än så jag har först ändrat grid så nav var under header och därefter har jag ändrat nav till flex-direction till row och sedan dessa positioner. Därefter har jag bara dolt nav a så nav button ska stanna kvar. Och sedan har jag skapat function till button.
 
-För funktionerna har jag fått en if-sats utanför funktionen som hjälpte mig att kolla om knappen finns i HTML-filen och jag behöll det eftersom det har funkat och det berättade mig varför det är bra att använda det så jag förstår varför det är bra.
+För funktionerna har jag fått en if-sats utanför funktionen som hjälpte mig att kolla om knappen finns i HTML-filen men sedan har jag ändrat till en bättre lösning. Jag har skapat två olika JavaScript och sätta dessa funktioner i filerna och sedan kopplat ihop med HTML-filerna. Det blir mer organiserad och förstår bättre vilka variablar tillhör vilka funktioner.
 
 Jag behöll också paket.options[paket.selectedIndex].text eftersom det har funkat och förstår varför denna kod fungerar.

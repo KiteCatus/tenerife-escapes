@@ -179,14 +179,6 @@ select {
     flex: 1 1 200px;
 }
 
-.dold {
-    display: none;
-}
-
-.visa {
-    display: block;
-}
-
 .tjanster {
     display: flex;
     gap: 16px;
@@ -198,6 +190,15 @@ select {
     display: flex;
     flex-direction: column;
     flex: 1;
+}
+
+/* Visa mer knappen */
+.dold {
+    display: none;
+}
+
+.visa {
+    display: block;
 }
 
 /* Länkar */
@@ -227,6 +228,7 @@ footer a, .inledning a {
     color:#1E3A5F;
 }
 
+/* Knappen */
 button {
     border: none;
     color:#FAF8F5;
@@ -411,7 +413,7 @@ section img {
         color: white;
     }
 
-    /* Öppen meny utseende */
+    /* Öppna meny utseende */
     .oppen-meny {
         display: flex;
         flex-direction: row;
