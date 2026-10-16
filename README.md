@@ -16,11 +16,11 @@ Vad kan besökaren göra på sidan? Vilken fil och vilka funktioner sköter det?
 
 - I om-teneriffa.html kan besökaren läsa mer saker om olika städer medan de klickar på Visa mer knappen. Jag har använt CSS för att dölja texten och JavaScript för att koppla ihop knappen till CSS med visaMer() funktion så om de ska klicka på knappen ska det byta class till .visa som gör att visa texten. Funktionen också byter texten till knappen.
 
-- I alla html filer har en knapp i nav som gör att besökaren kan öppna menyn i smala skärmarna medan de klicker på knappen. Jag har använt CSS så knappen ska inte synas och i en media query byter nav utseende till att knappen ska visas, <a> länkar inuti nav syns inte och navs utseende blir kolumn då när man klicker på knappen, det ska synas så här. Jag har också använt JavaScript så dessa kopplas ihop med en funktion som heter hamburgerMeny().
+- I alla html filer har en knapp i nav som gör att besökaren kan öppna menyn i smala skärmarna medan de klicker på knappen. Jag har använt CSS så knappen ska inte synas och i en media query byter nav utseende till att knappen ska visas, "a" länkar inuti nav syns inte och navs utseende blir kolumn då när man klicker på knappen, det ska synas så här. Jag har också använt JavaScript så dessa kopplas ihop med en funktion som heter hamburgerMeny().
 
-- I tjanster.html kan besökaren fylla in ett formulär där man kan välja vilken paket de vill ha och skriva ett meddelande till företaget hur de tänkte. Det funkar inte än att skicka den till en mejl men det visar att det skickades och vad besökaren har skrivit. I HTML använde jag en <form> då det skapar ett formulär och också en <select> <option> så användaren kan välja mellan 3 olika paketer. Jag har använt CSS hur det ska se ut och var det ska ligga. I JavaScript har jag använt en funktion som heter tjansteFormular() som gör att ta in variablar som jag har deklarerat utanför funktion. Funktionen kollar om besökaren har skrivit något eller inte och om de skickar då de får ett meddelande (alert()) som meddelar besökaren att de har skickat ett meddelande vad de har skrivit.
+- I tjanster.html kan besökaren fylla in ett formulär där man kan välja vilken paket de vill ha och skriva ett meddelande till företaget hur de tänkte. Det funkar inte än att skicka den till en mejl men det visar att det skickades och vad besökaren har skrivit. I HTML använde jag en "form" då det skapar ett formulär och också en "select" "option" så användaren kan välja mellan 3 olika paketer. Jag har använt CSS hur det ska se ut och var det ska ligga. I JavaScript har jag använt en funktion som heter tjansteFormular() som gör att ta in variablar som jag har deklarerat utanför funktion. Funktionen kollar om besökaren har skrivit något eller inte och om de skickar då de får ett meddelande (alert()) som meddelar besökaren att de har skickat ett meddelande vad de har skrivit.
 
-- I kontakt.html är samma som med tjanster.html form men utan <select> <option>. Funktionen heter kontaktFormular().
+- I kontakt.html är samma som med tjanster.html form men utan "select" "option". Funktionen heter kontaktFormular().
 
 ## AI-användning
 Minst två exempel. För varje:
@@ -32,7 +32,7 @@ Minst två exempel. För varje:
 
 2. Jag har gjort två funktioner som funkade inte och jag visste inte varför. Jag har provat många saker men efter det så har jag frågat AI. Felet var att två funktioner (formulär) har haft eventlistener utanför funktionen och de har därför letat efter knappen onödigt och på fel sidan. Eftersom några HTML filer har inte den knappen så AI föreslog att använsa if-satsen som kollar om sidan har den knappen eller inte. Om det har då körs funktionen. Det hjälpte mig att funktionen funkar utan att ändra något i funktionen. Men sedan tänkte jag att skapa två JavaScript filer till dessa funktion och jag har kopplat ihop med HTML fil där jag använder dessa.
 
-3. Jag visste inte hur jag kan använda value till <select> <option> så jag har bett AI hur jag kan lösa det och frågat också vad det betyder. Jag har fått paket.options[paket.selectedIndex].text. paket.options[1] är det första val. Men vi behöver detta val som besökaren har valt och vi behöver paket.selectedIndex inne i [] som ger detta som är vald. .text ger ett text så det ska synas i alert().
+3. Jag visste inte hur jag kan använda value till "select" "option" så jag har bett AI hur jag kan lösa det och frågat också vad det betyder. Jag har fått paket.options[ paket.selectedIndex ].text. paket.options[ 1 ] är det första val. Men vi behöver detta val som besökaren har valt och vi behöver paket.selectedIndex inne i [ ] som ger detta som är vald. .text ger ett text så det ska synas i alert().
 
 ## Tekniska val (VG)
 Vilka beslut tog jag, och varför?
@@ -51,8 +51,8 @@ Vilka beslut tog jag, och varför?
 Hur avgjorde jag om det AI gav mig var bra nog?
 Vad behöll jag, vad ändrade jag, och varför?
 
-Jag har frågat AI hur koden för en hamburgermeny ser ut och jag har förstått men sedan jag har skrivit själv eftersom jag har hittat ett lättare sätt att göra det. AI har använt foreach och position: absolute; men jag förstår bättre for loopen eftersom det har jag läst i programmering 1 med C# då jag tyckte att det är bättre. Jag har inte förstått position än så jag har först ändrat grid så nav var under header och därefter har jag ändrat nav till flex-direction till row och sedan dessa positioner. Därefter har jag bara dolt nav a så nav button ska stanna kvar. Och sedan har jag skapat function till button.
+- Jag har frågat AI hur koden för en hamburgermeny ser ut och jag har förstått men sedan jag har skrivit själv eftersom jag har hittat ett lättare sätt att göra det. AI har använt foreach och position: absolute; men jag förstår bättre for loopen eftersom det har jag läst i programmering 1 med C# då jag tyckte att det är bättre. Jag har inte förstått position än så jag har först ändrat grid så nav var under header och därefter har jag ändrat nav till flex-direction till row och sedan dessa positioner. Därefter har jag bara dolt nav a så nav button ska stanna kvar. Och sedan har jag skapat function till button.
 
-För funktionerna har jag fått en if-sats utanför funktionen som hjälpte mig att kolla om knappen finns i HTML-filen men sedan har jag ändrat till en bättre lösning. Jag har skapat två olika JavaScript och sätta dessa funktioner i filerna och sedan kopplat ihop med HTML-filerna. Det blir mer organiserad och förstår bättre vilka variablar tillhör vilka funktioner.
+- För funktionerna har jag fått en if-sats utanför funktionen som hjälpte mig att kolla om knappen finns i HTML-filen men sedan har jag ändrat till en bättre lösning. Jag har skapat två olika JavaScript och sätta dessa funktioner i filerna och sedan kopplat ihop med HTML-filerna. Det blir mer organiserad och förstår bättre vilka variablar tillhör vilka funktioner.
 
-Jag behöll också paket.options[paket.selectedIndex].text eftersom det har funkat och förstår varför denna kod fungerar.
+- Jag behöll också paket.options[ paket.selectedIndex ].text eftersom det har funkat och förstår varför denna kod fungerar.
